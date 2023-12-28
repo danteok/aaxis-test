@@ -18,6 +18,7 @@ class AppController extends AbstractController
 
         $t = 1;
         $t2 = 2;
+        $t3 = 3;
 
         return $this->render(
             'test/index.html.twig',
