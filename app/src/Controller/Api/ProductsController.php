@@ -4,6 +4,9 @@ namespace App\Controller\Api;
 
 use App\Entity\Product;
 use App\Form\ProductType;
+use App\Controller\ApiController;
+use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/api/products", name="api_products_")
  */
-class ProductsController extends AbstractController
+class ProductsController extends ApiController
 {
     /**
      * @Route("/", methods={"GET"}, name="index")
